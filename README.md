@@ -2,7 +2,7 @@
 
 一个用于 [小红书](https://www.xiaohongshu.com)（rednote）的 AI Agent Skill，基于 Python + Playwright 浏览器自动化实现。
 
-同时兼容 **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** 和 **[OpenClaw](https://openclaw.com)**，遵循 [AgentSkills](https://agentskills.io) 开放规范。
+同时兼容 **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)**、**[OpenClaw](https://openclaw.com)** 和 **[OpenCode](https://github.com/code-yeongyu/oh-my-opencode)**，遵循 [AgentSkills](https://agentskills.io) 开放规范。
 
 支持搜索笔记、提取帖子详情、查看用户主页、二维码扫码登录，并内置反爬保护机制。
 
@@ -170,6 +170,25 @@ clawhub install xiaohongshu-skill
 ```
 
 OpenClaw 会在下一个会话中自动加载。`SKILL.md` 中的 `{baseDir}` 模板变量会被替换为实际的 Skill 目录路径。
+
+### OpenCode
+
+在 OpenCode 中使用本 Skill：
+
+```bash
+# 克隆到本地工作目录
+git clone https://github.com/jingxiaolu/xiaohongshu-skill.git
+
+# 进入目录并安装依赖
+cd xiaohongshu-skill
+pip install -r requirements.txt
+playwright install chromium
+```
+
+OpenCode 会自动检测 `SKILL.md` 文件并加载技能。你可以直接通过自然语言与小红书交互，例如：
+- "搜索小红书上的美食推荐"
+- "帮我发布一篇旅行攻略笔记"
+- "检查我的小红书最新评论"
 
 ## 注意事项
 
